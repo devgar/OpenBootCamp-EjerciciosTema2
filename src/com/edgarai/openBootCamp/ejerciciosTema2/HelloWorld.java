@@ -11,10 +11,13 @@ public class HelloWorld {
     }
 
     /**
-     * Función principal. Simplemente imprime 'Hello World!'
+     * Función principal. Ejecuta e imprime un ejemplo de la función calcularPrecioConIVA.
      * @param args Argumentos de la línea de comandos.
      */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        float amount = 25f;
+        float total = calcularPrecioConIVA(amount);
+        String msg = "El precio completo de un producto que sin IVA vale %.2f€ es: %.2f".formatted(amount, total);
+        System.out.println(msg);
     }
 }
